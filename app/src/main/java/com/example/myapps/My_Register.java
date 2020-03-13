@@ -1,6 +1,7 @@
 package com.example.myapps;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -98,6 +99,8 @@ public class My_Register extends AppCompatActivity {
                         loading.dismiss();
 
                         Toast.makeText(My_Register.this, jObj.getString(TAG_MESSAGE), Toast.LENGTH_LONG).show();
+                        Intent i = new Intent(My_Register.this,My_Login.class);
+                        startActivity(i);
                         bersih();
                     } else {
                         Toast.makeText(My_Register.this, jObj.getString(TAG_MESSAGE), Toast.LENGTH_LONG).show();
